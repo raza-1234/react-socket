@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Home = () => {
 
   const changeHandler = (e) => {
     setUserName(e.target.value)
-  } 
+  }
 
   return (
     <form className="home__container" onSubmit={handleSubmit}>
